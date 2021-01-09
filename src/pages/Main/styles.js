@@ -6,6 +6,7 @@ export const Container = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
 `;
 
 export const Section = styled.div`
@@ -49,7 +50,6 @@ export const Section = styled.div`
         border-radius: 50%;
         box-shadow: 4px 4px 4px 2px rgba(0, 0, 0, 0.2);
     }
-      
 
 `;
 
@@ -67,6 +67,7 @@ export const Footer = styled.footer`
         font-size: 1.6rem;
         color: ${style.colors.light};
         opacity: 0.08;
+
     }
 
 `;

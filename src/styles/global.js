@@ -42,12 +42,20 @@ export default createGlobalStyle`
         height: 8vh;
         background: ${style.colors.dark};
         box-shadow: 4px 4px 4px 2px rgba(0, 0, 0, 0.2);
+
     }
 
     a, button {
         text-decoration: none;
         color: ${style.colors.primary};
         cursor: pointer;
+    }
+
+    @media(max-width: 420px) {
+        body {
+            background: #FFF;
+        }
+        
     }
 
 `;

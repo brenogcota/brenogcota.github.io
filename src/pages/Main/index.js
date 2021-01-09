@@ -33,7 +33,7 @@ function Main() {
             </Container>
 
             <Footer>
-                <p> © Copyright 2021. </p>
+                <p> Copyright © 2021 </p>
             </Footer>
         </>
     );

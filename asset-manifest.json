@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.js": "/home/static/js/main.4be59766.chunk.js",
-    "main.js.map": "/home/static/js/main.4be59766.chunk.js.map",
-    "runtime-main.js": "/home/static/js/runtime-main.e9eafef5.js",
-    "runtime-main.js.map": "/home/static/js/runtime-main.e9eafef5.js.map",
-    "static/js/2.d1ec3b93.chunk.js": "/home/static/js/2.d1ec3b93.chunk.js",
-    "static/js/2.d1ec3b93.chunk.js.map": "/home/static/js/2.d1ec3b93.chunk.js.map",
-    "index.html": "/home/index.html",
-    "precache-manifest.8eea52b77acc368614f53bd6bbdaa03f.js": "/home/precache-manifest.8eea52b77acc368614f53bd6bbdaa03f.js",
-    "service-worker.js": "/home/service-worker.js",
-    "static/js/2.d1ec3b93.chunk.js.LICENSE.txt": "/home/static/js/2.d1ec3b93.chunk.js.LICENSE.txt"
+    "main.js": "/brenocota/static/js/main.4be59766.chunk.js",
+    "main.js.map": "/brenocota/static/js/main.4be59766.chunk.js.map",
+    "runtime-main.js": "/brenocota/static/js/runtime-main.53f8cdf2.js",
+    "runtime-main.js.map": "/brenocota/static/js/runtime-main.53f8cdf2.js.map",
+    "static/js/2.cf2fc7dc.chunk.js": "/brenocota/static/js/2.cf2fc7dc.chunk.js",
+    "static/js/2.cf2fc7dc.chunk.js.map": "/brenocota/static/js/2.cf2fc7dc.chunk.js.map",
+    "index.html": "/brenocota/index.html",
+    "precache-manifest.1665cb264d7b3d3f365c1ec2f803cf5c.js": "/brenocota/precache-manifest.1665cb264d7b3d3f365c1ec2f803cf5c.js",
+    "service-worker.js": "/brenocota/service-worker.js",
+    "static/js/2.cf2fc7dc.chunk.js.LICENSE.txt": "/brenocota/static/js/2.cf2fc7dc.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.e9eafef5.js",
-    "static/js/2.d1ec3b93.chunk.js",
+    "static/js/runtime-main.53f8cdf2.js",
+    "static/js/2.cf2fc7dc.chunk.js",
     "static/js/main.4be59766.chunk.js"
   ]
 }

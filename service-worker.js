@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/brenocota/precache-manifest.1665cb264d7b3d3f365c1ec2f803cf5c.js"
+  "/brenocota/precache-manifest.a6b7544c9aba02666e1af324383afa83.js"
 );
 
 self.addEventListener('message', (event) => {

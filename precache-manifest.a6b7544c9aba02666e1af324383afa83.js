@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "8acc2d1b2fd62afee42117c6ceecf0df",
+    "revision": "8d90e3ff5b3b33aad30e366826699848",
     "url": "/brenocota/index.html"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/brenocota/static/js/2.cf2fc7dc.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "bf37c0420cee9ee1dfc2",
-    "url": "/brenocota/static/js/main.4be59766.chunk.js"
+    "revision": "edc1652b10ea24027be9",
+    "url": "/brenocota/static/js/main.e2d1414f.chunk.js"
   },
   {
     "revision": "478dc632d936800768e4",

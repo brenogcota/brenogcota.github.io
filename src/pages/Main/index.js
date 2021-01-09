@@ -4,13 +4,14 @@ import { Container, Section, Footer } from './styles';
 
 
 function Main() {
+
+
     return (
         <>
-            <header></header>
             <Container>
                 <Section>
                     <article className="bio">
-                        <h2>Welcome!</h2>
+                        <h2>Hello, humans! 🤘</h2>
                         <div className="desc">
                             <p>I'm a web developer focused on backend development.
                                     Graduating in Systems Analysis and

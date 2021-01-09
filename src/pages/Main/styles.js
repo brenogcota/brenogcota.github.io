@@ -4,15 +4,16 @@ import { style } from '../../config/style';
 export const Container = styled.div`
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    //align-items: center;
+    //justify-content: center;
 
 `;
+
 
 export const Section = styled.div`
     display: flex;
     justify-content: space-between;
-    padding: 10rem 10rem;
+    padding: 10rem;
     
 
     .bio {
@@ -51,6 +52,25 @@ export const Section = styled.div`
         box-shadow: 4px 4px 4px 2px rgba(0, 0, 0, 0.2);
     }
 
+    @media(max-width: 30em) {
+        & {
+            flex-direction: column-reverse;
+            align-items: center;
+            text-align: center;
+            padding: 5rem;
+        }
+
+        .bio {
+            width: 100%;
+        }
+
+        > img {
+            width: 10rem;
+            height: 10rem;
+        }
+        
+    }
+
 `;
 
 
@@ -69,6 +89,7 @@ export const Footer = styled.footer`
         opacity: 0.08;
 
     }
+
 
 `;
 

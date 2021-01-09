@@ -37,7 +37,6 @@ export default createGlobalStyle`
         position: fixed;
         top: 0;
         padding: 0 10vw;
-        //width: 100%;
         width: 100vw;
         height: 8vh;
         background: ${style.colors.dark};
@@ -51,9 +50,13 @@ export default createGlobalStyle`
         cursor: pointer;
     }
 
-    @media(max-width: 420px) {
+    @media(max-width: 30em) {
         body {
-            background: #FFF;
+            font-size: 1.6rem;
+        }
+
+        header {
+            display: none;
         }
         
     }

@@ -1,6 +1,8 @@
 import { createGlobalStyle } from 'styled-components';
+import { style } from '../config/style';
 
 export default createGlobalStyle`
+
 
     * {
         margin: 0;
@@ -19,12 +21,14 @@ export default createGlobalStyle`
 
     body {
         margin: 0;
-        font-family: Roboto, Arial, Helvetica, sans-serif;
+        font-family: ${style.font};
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
-        background: #222;
-        color: #eee;
+        background: ${style.colors.dark};
+        color: ${style.colors.light};
         font-size: 2rem;
+        max-width: 100%;
+        overflow-x: hidden;
     }
 
     header {
@@ -33,15 +37,16 @@ export default createGlobalStyle`
         position: fixed;
         top: 0;
         padding: 0 10vw;
-        width: 100%;
+        //width: 100%;
+        width: 100vw;
         height: 8vh;
-        background: #222;
+        background: ${style.colors.dark};
         box-shadow: 4px 4px 4px 2px rgba(0, 0, 0, 0.2);
     }
 
     a, button {
         text-decoration: none;
-        color: #666;
+        color: ${style.colors.primary};
         cursor: pointer;
     }
 

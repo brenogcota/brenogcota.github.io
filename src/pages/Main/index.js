@@ -2,10 +2,6 @@ import React from 'react'
 
 import { Container, Section, Footer } from './styles';
 
-import photo from '../../assets/profile.png';
-import gitico from '../../assets/github.png';
-import instaico from '../../assets/insta.png';
-import linkedico from '../../assets/linkedin.png';
 
 function Main() {
     return (
@@ -13,27 +9,31 @@ function Main() {
             <header></header>
             <Container>
                 <Section>
-                    <div>
-                        <h2>Breno Cota</h2>
-                        <p>Olá, meu nome é Breno, tenho 21 anos e sou Desenvolvedor de Software
-
-                        </p>
-
-                        <a href="https://github.com/brenogcota" target="_blank"><img src={ gitico } alt="github"/></a>
-                        <a href="https://www.instagram.com/dbrno/" target="_blank"><img src={ instaico } alt="instagram"/></a>
-                        <a href="https://www.linkedin.com/in/breno-cota-a51711177/" target="_blank"><img src={ linkedico } alt="linkedin"/></a>
-
-                    </div>
+                    <article className="bio">
+                        <h2>Welcome!</h2>
+                        <div className="desc">
+                            <p>I'm a web developer focused on backend development.
+                                    Graduating in Systems Analysis and
+                                    Development from the Federal Institute of
+                                    northern Minas Gerais 🎓</p>
+                            <p>Currently working at Codeby 💻 ⚡</p>
+                            <p>🎸 guitarist in free time</p>
+                        </div>
+                        
+                        <div className="social-media">
+                            <a href="https://github.com/brenogcota" target="_blank">Github</a>
+                            <a href="https://www.instagram.com/dbrno/" target="_blank">Instagram</a>
+                            <a href="https://www.linkedin.com/in/breno-cota-a51711177/" target="_blank">LinkedIn</a>
+                        </div>
+                    </article>
                             
-                    <img src={ photo } alt="photo"/>
-                     
+                    <img src='https://avatars1.githubusercontent.com/u/46490801?s=400&u=06d4c2565950ce04df5aee50db9d66c2ec29ccc0&v=4' alt="photo"/>
                 </Section>
-                
+
             </Container>
 
             <Footer>
-                <a href="https://api.whatsapp.com/send?phone=5533999078935&text=Oi" target="_blank"><p>(33) 999078935 </p></a>
-                <p> © Copyright 2020. </p>
+                <p> © Copyright 2021. </p>
             </Footer>
         </>
     );

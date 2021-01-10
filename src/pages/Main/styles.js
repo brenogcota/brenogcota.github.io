@@ -13,7 +13,7 @@ export const Container = styled.div`
 export const Section = styled.div`
     display: flex;
     justify-content: space-between;
-    padding: 10rem;
+    padding: 5rem 10rem;
     
 
     .bio {
@@ -21,7 +21,7 @@ export const Section = styled.div`
         height: 100%;
 
         h2 {
-            margin: 5rem 0 2rem;
+            margin: 0 0 2rem;
         }
 
         .desc {
@@ -50,6 +50,11 @@ export const Section = styled.div`
         height: 25rem;
         border-radius: 50%;
         box-shadow: 4px 4px 4px 2px rgba(0, 0, 0, 0.2);
+
+        :hover {
+            transform: rotate(-360deg);
+            transition: all 1.4s;
+        }
     }
 
     @media(max-width: 30em) {

@@ -1,14 +1,16 @@
 import React from 'react'
 
-import { Container, Section, Footer } from './styles';
+import Footer from '../../components/Footer';
+import TopBar from '../../components/TopBar';
+import { Container, Section } from './styles';
 
 
 function Main() {
 
-
     return (
         <>
             <Container>
+                <TopBar/>
                 <Section>
                     <article className="bio">
                         <h2>Hello, humans! 🤘</h2>
@@ -33,9 +35,7 @@ function Main() {
 
             </Container>
 
-            <Footer>
-                <p> Copyright © 2021 </p>
-            </Footer>
+            <Footer/>
         </>
     );
 }

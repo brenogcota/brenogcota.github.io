@@ -9,9 +9,30 @@ export const Container = styled.div`
 
 `;
 
+export const Link = styled.div`
+    border: 2px solid #FFF;
+    border-radius: 8px;
+    padding: .8rem;
+    margin: 5px 0;
+    width: 100%;
+    max-width: 200px;
+    text-align: center;
+
+    a {
+        color: #FFF;
+    }
+
+    @media(max-width: 30em) {
+        & {
+            min-width: 90vw;
+        }
+    }
+`;
 
 export const Section = styled.div`
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: space-between;
     padding: 5rem 10rem;
     
@@ -46,25 +67,15 @@ export const Section = styled.div`
 
     
     > img {
-        width: 25rem;
-        height: 25rem;
+        width: 15rem;
+        height: 15rem;
         border-radius: 50%;
-        box-shadow: 4px 4px 4px 2px rgba(0, 0, 0, 0.2);
+        margin: 3rem 0;
+        //box-shadow: 4px 4px 4px 2px rgba(0, 0, 0, 0.2);
 
-        :hover {
-            transform: rotate(-360deg);
-            transition: all 1.4s;
-        }
     }
 
     @media(max-width: 30em) {
-        & {
-            flex-direction: column-reverse;
-            align-items: center;
-            text-align: center;
-            padding: 5rem;
-        }
-
         .bio {
             width: 100%;
         }

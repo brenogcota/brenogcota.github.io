@@ -17,7 +17,6 @@ function Main() {
             .then(response => response.json()) 
             .then( data => {
                 setUser(data);
-                console.log(data);
             })
             .catch( error => console.error(error));
     }, []);

@@ -31,9 +31,7 @@ export const Link = styled.div`
 
 export const Section = styled.div`
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     padding: 5rem 10rem;
     
 
@@ -60,24 +58,58 @@ export const Section = styled.div`
                 :first-child {
                     margin-left: 0;
                 }
+
+                img {
+                    width: 2.5rem;
+                    height: 2.5rem;
+                    filter: brightness(0.7);
+                    transition: all 0.4s;
+                }
+
+                img:hover {
+                    filter: brightness(1);
+                }
             }
+
         }
 
     }
 
-    
-    > img {
-        width: 15rem;
-        height: 15rem;
-        border-radius: 50%;
-        margin: 3rem 0;
-        //box-shadow: 4px 4px 4px 2px rgba(0, 0, 0, 0.2);
+    .user-section {
 
+        .profile-image {
+            width: 15rem;
+            height: 15rem;
+            border-radius: 50%;
+            margin: 0 0 3rem;
+        }
+
+        h3 {
+            margin-bottom: 1rem;
+        }
+
+        p {
+            margin: 0.4rem 0;
+        }
+
+        .location img {
+            width: 1.8rem;
+            margin-right: 0.5rem;
+        }
     }
 
     @media(max-width: 30em) {
+        flex-direction: column;
+        padding: 1rem 2rem;
+
         .bio {
             width: 100%;
+            margin-bottom: 5rem;
+            text-align: center;
+        }
+
+        .user-section {
+            text-align: center;
         }
 
         > img {

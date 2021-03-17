@@ -1,24 +1,14 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
 
-import { TopBarElement, NavItem } from './styles';
+import { TopBarElement } from './styles';
 
+import {ReactComponent as Logo} from '../../assets/icon.svg'
 
 function TopBar() {
 
     return (
         <TopBarElement>
-            <NavItem>
-                <NavLink exact to="/" activeClassName="selected">About me</NavLink>
-            </NavItem>
-
-            <NavItem>
-                <NavLink to="/experience" activeClassName="selected">Experience</NavLink>
-            </NavItem>
-
-            <NavItem>
-                <NavLink to="/skills" activeClassName="selected">Skill's</NavLink>
-            </NavItem>
+            <Logo />
         </TopBarElement>
     );
 }

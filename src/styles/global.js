@@ -24,7 +24,7 @@ export default createGlobalStyle`
         font-family: ${style.font};
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
-        background: ${style.colors.dark};
+        background: linear-gradient(117.6deg, #000000 32.83%, rgba(10, 9, 9, 0.9) 74.25%);
         color: ${style.colors.light};
         font-size: 2rem;
         max-width: 100%;

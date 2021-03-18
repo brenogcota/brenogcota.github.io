@@ -64,7 +64,7 @@ export const Section = styled.div`
                 img {
                     width: 3.5rem;
                     height: 3.5rem;
-                    filter: brightness(0.7);
+                    filter: brightness(0.5);
                     transition: all 0.4s;
                 }
 
@@ -158,12 +158,33 @@ export const SpotifySection = styled.div`
         audio {display: none}
 
         .card-footer {
-
+            opacity: 0;
+            display: none;
+            transition: all 0.6s ease-out;
         }
+
     }
 
     .spotify-card:hover {
         filter: grayscale(0);
+
+        .card-footer {
+            opacity: 1;
+            display: block;
+            animation: show 1s;
+        }
+    }
+
+    @keyframes show {
+        from {
+            margin-left: 60%;
+            width: 100%;
+        }
+
+        to {
+            margin-left: 0%;
+            width: 100%;
+        }
     }
 `;
 

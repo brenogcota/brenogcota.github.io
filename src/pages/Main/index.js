@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from 'react';
 
 import TopBar from '../../components/TopBar';
-import { Container, Section } from './styles';
+import { Container, Section, SpotifySection } from './styles';
+
+import { auth } from '../../config/auth';
+import storaged from '../../config/recents.json';
 
 import github from '../../assets/github.png';
 import instagram from '../../assets/instagram.png';
@@ -11,6 +14,7 @@ import brazil from '../../assets/brazil.png'
 
 function Main() {
     const [user, setUser] = useState(null);
+    const [recents, setRecent] = useState(null);
 
     useEffect(()=> {
         fetch('https://api.github.com/users/brenogcota')
@@ -19,6 +23,28 @@ function Main() {
                 setUser(data);
             })
             .catch( error => console.error(error));
+    }, []);
+
+    useEffect(() => {
+
+        let headers = new Headers({
+                                "Accept": "application/json",
+                                "Content-Type": "Content-Type: application/json",
+                                "Authorization": `Bearer ${auth.token}`
+                            });
+
+        const options = { 
+                method: 'GET',
+                headers,
+            };
+        fetch('https://api.spotify.com/v1/me/player/recently-played?limit=11', options)
+            .then(response => response.json()) 
+            .then( data => {
+                console.log(data.items);
+                data.items ? setRecent(data.items) : setRecent(storaged);
+            })
+            .catch( error => console.error(error));
+        
     }, []);
 
     return (
@@ -55,33 +81,36 @@ function Main() {
 
                     {
                         user && <div className="user-section">
-                            <img className="profile-image" src={user.avatar_url} alt="image-name"/>
-                            <h3> {user.name}</h3>
-                            <p>{user.bio}</p>
-                            <a href={"https://"+user.blog}>🔗 {user.blog}</a>
-                            <p>🚀 {user.company}</p>
-                            <p className="location"><img src={brazil} />{user.location}</p>
-                            <a href={user.repos_url}>⭐ {user.public_repos}</a>
-                        </div>
+                                    <img className="profile-image" src={user.avatar_url} alt="image-name"/>
+                                    <h3> {user.name}</h3>
+                                    <p>{user.bio}</p>
+                                    <a href={"https://"+user.blog}>🔗 {user.blog}</a>
+                                    <p>🚀 {user.company}</p>
+                                    <p className="location"><img src={brazil} />{user.location}</p>
+                                    <a href={user.repos_url}>⭐ {user.public_repos}</a>
+                                </div>
                     }
                 </Section>
 
-                {/* <Section>
-                    { user && <img src={user.avatar_url} alt="photo"/> }
-                    <Link>
-                        <a href="https://github.com/brenogcota" target="_blank">Github</a>
-                    </Link>
-                    <Link>
-                        <a href="https://www.instagram.com/dbrno/" target="_blank">Instagram</a>
-                    </Link>
-                    <Link>
-                        <a href="https://www.linkedin.com/in/breno-cota-a51711177/" target="_blank">LinkedIn</a>
-                    </Link>
-                </Section> */}
+                <SpotifySection>
+                    {
+                        <h1>Recently <span>played</span> songs</h1>
+                    }
+                    {
+                        recents && recents.map(recent => {
+                                        return (
+                                            <a key={recent.track.id} href={recent.track.external_urls.spotify} className="spotify-card" style={{backgroundImage: `url(${recent.track.album.images[0].url})`}} target="_blank">
+                                                <div className="card-footer">
+                                                    <h5>{recent.track.name}</h5>
+                                                    <h6>{recent.track.artists[0].name}</h6>
+                                                </div>
+                                            </a>
+                                        )
+                                    })
+                    } 
+                </SpotifySection>
 
             </Container>
-
-            {/*<Footer/>*/}
         </>
     );
 }

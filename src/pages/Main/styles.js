@@ -40,11 +40,13 @@ export const Section = styled.div`
         height: 100%;
 
         h2 {
+            font-size: 3.6rem;
             margin: 0 0 2rem;
         }
 
         .desc {
             margin-bottom: 3rem;
+            font-size: 2.6rem;
 
             p {
                 margin-bottom: 0.6rem;
@@ -60,8 +62,8 @@ export const Section = styled.div`
                 }
 
                 img {
-                    width: 2.5rem;
-                    height: 2.5rem;
+                    width: 3.5rem;
+                    height: 3.5rem;
                     filter: brightness(0.7);
                     transition: all 0.4s;
                 }
@@ -78,18 +80,20 @@ export const Section = styled.div`
     .user-section {
 
         .profile-image {
-            width: 15rem;
-            height: 15rem;
+            width: 25rem;
+            height: 25rem;
             border-radius: 50%;
             margin: 0 0 3rem;
         }
 
         h3 {
             margin-bottom: 1rem;
+            font-size: 3.6rem;
         }
 
         p {
             margin: 0.4rem 0;
+            font-size: 3rem;
         }
 
         .location img {
@@ -99,17 +103,22 @@ export const Section = styled.div`
     }
 
     @media(max-width: 30em) {
-        flex-direction: column;
+        flex-direction: column-reverse;
         padding: 1rem 2rem;
 
         .bio {
             width: 100%;
-            margin-bottom: 5rem;
             text-align: center;
         }
 
         .user-section {
             text-align: center;
+            margin-bottom: 5rem;
+
+            .profile-image {
+                width: 15rem;
+                height: 15rem;
+            }
         }
 
         > img {
@@ -119,6 +128,40 @@ export const Section = styled.div`
         
     }
 
+`;
+
+export const SpotifySection = styled.div`
+    padding: 5rem 10rem;
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
+    grid-gap: 2rem;
+
+    h1 span {
+        color: red;
+    }
+
+    .spotify-card {
+        width: 20rem;
+        height: 20rem;
+        border-radius: 0.5rem;
+        padding: 1rem;
+        background-size: 100%;
+        object-fit: contain;
+        filter: grayscale(1);
+        color: #EEE;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+
+        .card-footer {
+
+        }
+    }
+
+    .spotify-card:hover {
+        filter: grayscale(0);
+    }
 `;
 
 

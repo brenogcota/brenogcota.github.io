@@ -47,6 +47,19 @@ function Main() {
         
     }, []);
 
+    const playSound = (e) => {
+        if(e.target.dataset && e.target.dataset.id) {
+            document.getElementsByClassName(`${e.target.dataset.id}`)[0].play();
+        }
+    }
+
+    const stopSound = (e) => {
+        if(e.target.dataset && e.target.dataset.id) {
+            document.getElementsByClassName(`${e.target.dataset.id}`)[0].pause();
+            document.getElementsByClassName(`${e.target.dataset.id}`)[0].currentTime = 0;
+        }
+    }
+
     return (
         <>
             <Container>
@@ -99,12 +112,15 @@ function Main() {
                     {
                         recents && recents.map(recent => {
                                         return (
-                                            <a key={recent.track.id} href={recent.track.external_urls.spotify} className="spotify-card" style={{backgroundImage: `url(${recent.track.album.images[0].url})`}} target="_blank">
-                                                <div className="card-footer">
+                                            <div key={recent.track.id} data-id={recent.track.id} onMouseEnter={(e) => { playSound(e) }} onMouseOut={(e) => { stopSound(e) }} className="spotify-card" style={{backgroundImage: `url(${recent.track.album.images[0].url})`}} target="_blank">
+                                                <audio controls className={recent.track.id}>
+                                                    <source src={recent.track.preview_url} type="audio/mpeg" />
+                                                </audio>
+                                                <a href={recent.track.external_urls.spotify} className="card-footer">
                                                     <h5>{recent.track.name}</h5>
                                                     <h6>{recent.track.artists[0].name}</h6>
-                                                </div>
-                                            </a>
+                                                </a>
+                                            </div>
                                         )
                                     })
                     } 

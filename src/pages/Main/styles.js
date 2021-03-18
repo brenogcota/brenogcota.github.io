@@ -149,10 +149,13 @@ export const SpotifySection = styled.div`
         object-fit: contain;
         filter: grayscale(1);
         color: #EEE;
+        cursor: pointer;
 
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
+
+        audio {display: none}
 
         .card-footer {
 

@@ -64,12 +64,12 @@ export const Section = styled.div`
                 img {
                     width: 3.5rem;
                     height: 3.5rem;
-                    filter: brightness(0.5);
+                    filter: grayscale(1);
                     transition: all 0.4s;
                 }
 
                 img:hover {
-                    filter: brightness(1);
+                    filter: grayscale(0);
                 }
             }
 

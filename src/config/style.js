@@ -1,5 +1,5 @@
 export const style = {
-    font: 'Roboto, Arial, Helvetica, sans-serif',
+    font: '"Roboto Mono", monospace, Roboto, Arial, Helvetica, sans-serif',
     colors: {
         dark: '#000',
         light: '#FFF',

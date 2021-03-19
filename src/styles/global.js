@@ -3,7 +3,8 @@ import { style } from '../config/style';
 
 export default createGlobalStyle`
 
-
+    @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
+    
     * {
         margin: 0;
         padding: 0;

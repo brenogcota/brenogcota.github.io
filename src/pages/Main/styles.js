@@ -97,7 +97,7 @@ export const Section = styled.div`
         }
 
         .location img {
-            width: 1.8rem;
+            width: 3rem;
             margin-right: 0.5rem;
         }
     }

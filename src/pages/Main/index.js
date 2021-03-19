@@ -66,13 +66,13 @@ function Main() {
                 <TopBar/>
                 <Section>
                     <article className="bio">
-                        <h2>Hello, humans! 🤘</h2>
+                        <h2>Hello, humans!</h2>
                         <div className="desc">
                             <p>I'm a Developer focused on web development.
                                     Graduating in Systems Analysis and
                                     Development from the Federal Institute of
-                                    northern Minas Gerais 🎓</p>
-                            <p>Currently working at Codeby 💻 ⚡</p>
+                                    northern Minas Gerais</p>
+                            <p>Currently working at Codeby</p>
                             <p>🎸 guitarist in free time</p>
                         </div>
                         
@@ -97,10 +97,8 @@ function Main() {
                                     <img className="profile-image" src={user.avatar_url} alt="image-name"/>
                                     <h3> {user.name}</h3>
                                     <p>{user.bio}</p>
-                                    <a href={"https://"+user.blog}>🔗 {user.blog}</a>
-                                    <p>🚀 {user.company}</p>
                                     <p className="location"><img src={brazil} />{user.location}</p>
-                                    <a href={user.repos_url}>⭐ {user.public_repos}</a>
+                                    <a href={"https://"+user.blog}>🔗 {user.blog}</a>
                                 </div>
                     }
                 </Section>

@@ -1,3 +1,3 @@
 export const auth = {
-    token: "BQCrCVJWWsr-8_PY8YhwD_Tgrts1Cu0-mCDIlJrC8Kl9LJPN-ZQNrJs7bQB3vufULpGxeL4yuzNHKw4AB3fXCcFxWp9JpYZi86zDzfiOOle_t7S2lfM92vRo2M1KnY-ioeJgBq9m6K1EHjpAqg",
+    token: "BQDTWQgZeHcI_UzFD4Kr0l3FmkoH--zvUjHnJoSUml6DuxeL9xqRQ9f8VKbG9TMXca2JmciCDoRZoMX39yqyGWGojbj3QSDS8Sp1FTjKZOxgb-_vOTBAPXPmEqfBcKN8Nfhy77Hzzm3mD85sog",
 }
